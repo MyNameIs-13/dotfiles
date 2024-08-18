@@ -1,0 +1,63 @@
+[
+    (
+        name: "cosmic-office",
+        icon: "folder-symbolic",
+        filter: Categories(
+            categories: [
+                "Office",
+            ],
+            exclude: [
+                "joplin",
+                "thunderbird",
+                "texstudio",
+            ],
+            include: [
+                "org.gnome.Totem",
+                "org.gnome.eog",
+                "simple-scan",
+            ],
+        ),
+    ),
+    (
+        name: "cosmic-system",
+        icon: "folder-symbolic",
+        filter: Categories(
+            categories: [
+                "System",
+            ],
+            exclude: [
+                "com.system76.CosmicStore",
+                "com.system76.CosmicTerm",
+            ],
+            include: [
+                "gnome-language-selector",
+                "im-config",
+                "org.freedesktop.IBus.Setup",
+                "system76-driver",
+                "syncthing-start",
+            ],
+        ),
+    ),
+    (
+        name: "cosmic-utilities",
+        icon: "folder-symbolic",
+        filter: Categories(
+            categories: [
+                "Utility",
+            ],
+            exclude: [
+                "com.system76.CosmicEdit",
+                "com.system76.CosmicFiles",
+                "org.keepassxc.KeePassXC",
+                "dev.zed.Zed",
+                "org.raspberrypi.rpi-imager",
+            ],
+            include: [
+                "nm-connection-editor",
+                "org.rncbc.qsynth",
+                "texdoctk",
+                "remote-viewer",
+            ],
+        ),
+    ),
+]

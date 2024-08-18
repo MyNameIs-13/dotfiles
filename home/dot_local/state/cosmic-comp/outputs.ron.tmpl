@@ -1,0 +1,23 @@
+{{- if eq .chezmoi.hostname "framework"  }}
+(
+    config: {
+        [
+            (
+                connector: "eDP-1",
+                make: "Unknown",
+                model: "2399",
+            ),
+        ]: [
+            (
+                mode: ((2256, 1504), Some(59999)),
+                vrr: false,
+                scale: 1.25,
+                transform: Normal,
+                position: (0, 0),
+                enabled: true,
+                max_bpc: Some(12),
+            ),
+        ],
+    },
+)
+{{- end }}
