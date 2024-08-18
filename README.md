@@ -4,3 +4,5 @@
 - apps
 - keepass autostart (&auto unlock)
 - syncthing
+- bashrc
+- vimrc
