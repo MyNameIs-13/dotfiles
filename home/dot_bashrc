@@ -115,3 +115,55 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+#####################################################
+# GSK
+#####################################################
+export BOLD="$(tput bold)"
+export NORMAL="$(tput sgr0)"
+
+eval "$(oh-my-posh init bash --config "/home/${USER}/.local/share/chezmoi/data/skodo.omp.json")"
+
+alias cm='chezmoi'
+
+# encode/decode base64
+function b64(){
+    local first_arg="$1"
+    local second_arg="$2"
+
+    if [[ "${first_arg}" == "-d" ]]; then
+        echo -n "${second_arg}" | base64 -d
+    else
+        echo -n "${first_arg}" | base64
+    fi
+}
+
+function update() {
+    tags="gui,home"
+    if [[ "${HOST_NAME}" == *"vm"* ]]; then
+        tags+=",vm"
+    fi
+    if command -v dmidecode &> /dev/null; then
+        chassis_type=$(sudo dmidecode -s chassis-type)
+        case "${chassis_type}" in
+            "Notebook" | "Portable" | "Laptop")
+                tags+=",laptop"
+                ;;
+            "Desktop" | "Tower" | "Mini Tower" | "Desktop or Tower")
+                tags+=",desktop"
+                ;;
+            *)
+                echo "Unknown chassis type: ${chassis_type}"
+                ;;
+        esac
+    fi
+    ansible_path="/home/${USER}/documents/scm/popos_install_2404/ansible"
+    inventory="${ansible_path}/localhost"
+    playbook="${ansible_path}/main.yml"
+    sudo ansible-playbook "${playbook}" -i "${inventory}" -t ${tags} -e main_user=${USER}
+    echo -e "______________________"
+    echo -e "${BOLD}++++ system updated ++++${NORMAL}\n\n"
+    chezmoi apply
+    echo -e "______________________"
+    echo -e "${BOLD}++++ dotfiles updated ++++${NORMAL}\n\n"
+}

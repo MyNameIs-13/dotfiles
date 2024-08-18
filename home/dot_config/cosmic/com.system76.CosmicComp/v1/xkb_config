@@ -3,7 +3,7 @@
     model: "",
     layout: "us",
     variant: "",
-    options: Some(",lv3:alt_switch,compose:caps"),
+    options: Some(",compose:menu"),
     repeat_delay: 600,
     repeat_rate: 25,
 )

@@ -1,8 +1,7 @@
 ## TODO
-- keyboard layout
 - autologin
 - apps
 - keepass autostart (&auto unlock)
 - syncthing
-- bashrc
-- vimrc
+- noise suppression
+- ssh
