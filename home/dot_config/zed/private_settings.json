@@ -1,0 +1,57 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+
+{
+  "auto_install_extensions": {
+    "basher": true,
+    "html": true,
+    "nix": true,
+    "vala": true,
+    "docker-compose": true,
+    "ini": true,
+    "powershell": true,
+    "xml": true,
+    "env": true,
+    "markdown-oxide": true,
+    "ron": true,
+    "git-firefly": true,
+    "meson": true,
+    "terraform": true
+  },
+  "hour_format": "hour24",
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
+  "scrollbar": {
+    "show": "always"
+  },
+  "use_autoclose": false,
+  "ui_font_family": "Hack Nerd Font Propo",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  "terminal": {
+    "font_family": "Hack Nerd Font Propo",
+    "font_size": 14
+  }
+}
