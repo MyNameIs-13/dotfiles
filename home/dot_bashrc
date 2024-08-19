@@ -125,6 +125,8 @@ export NORMAL="$(tput sgr0)"
 eval "$(oh-my-posh init bash --config "/home/${USER}/.local/share/chezmoi/data/skodo.omp.json")"
 
 alias cm='chezmoi'
+complete -F __start_chezmoi cm
+# complete -p xxx (to find the complete information for command xxx)
 
 # encode/decode base64
 function b64(){

@@ -53,5 +53,6 @@
   "terminal": {
     "font_family": "Hack Nerd Font Propo",
     "font_size": 14
-  }
+  },
+  "ensure_final_newline_on_save": false
 }
