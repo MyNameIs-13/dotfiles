@@ -1,6 +1,6 @@
 (
     output: "all",
-    source: Path("/home/skodo/.local/share/chezmoi/wallpaper"),
+    source: Path("/home/skodo/.local/share/wallpaper"),
     filter_by_theme: true,
     rotation_frequency: 7200,
     filter_method: Lanczos,
