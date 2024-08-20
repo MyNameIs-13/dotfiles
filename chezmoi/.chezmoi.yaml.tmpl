@@ -3,4 +3,7 @@ workingTree: "{{ joinPath .chezmoi.config.sourceDir ".." }}"
 git:
   autocommit: false
   autopush: false
-verbose: true
+verbose: false
+encryption: "age"
+    identity: "~/.config/chezmoi/keyfile"
+    recipient: "age1jly30sgfrnvx5ggr8q445sqjnx0e2dnfjkyfzf8vd285sdwws38spvm326"
