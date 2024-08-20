@@ -1,0 +1,6 @@
+sourceDir: "{{ .chezmoi.config.sourceDir }}"
+workingTree: "{{ joinPath .chezmoi.config.sourceDir ".." }}"
+git:
+  autocommit: false
+  autopush: false
+verbose: true
