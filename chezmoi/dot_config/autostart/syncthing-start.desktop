@@ -1,14 +1,10 @@
 [Desktop Entry]
-Name=KeePassXC
-GenericName=Password Manager
-Comment=Community-driven port of the Windows application "Keepass Password Sage"
-Exec=/usr/bin/keepassxc %f
-TryExec=/usr/bin/keepassxc
-Icon=keepassxc
-StartupWMClass=keepassxc
-StartupNotify=true
+Name=Start Syncthing
+GenericName=File synchronization
+Comment=Starts the main syncthing process in the background.
+Exec=/usr/bin/syncthing serve --no-default-folder --no-browser --logfile=default
+Icon=syncthing
 Terminal=false
 Type=Application
-Version=1.5
-Categories=Utility;Security;Qt;
-MimeType=application/x-keepass2;
+Keywords=synchronization;daemon;
+Categories=Network;FileTransfer;P2P
