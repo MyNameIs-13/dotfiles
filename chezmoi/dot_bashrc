@@ -119,10 +119,12 @@ fi
 #####################################################
 # GSK
 #####################################################
+scm_path="/home/${USER}/documents/scm"
+
 export BOLD="$(tput bold)"
 export NORMAL="$(tput sgr0)"
 
-eval "$(oh-my-posh init bash --config "/home/${USER}/.local/share/chezmoi/data/skodo.omp.json")"
+eval "$(oh-my-posh init bash --config "/home/${USER}/.config/oh-my-posh/skodo.omp.json")"
 
 alias cm='chezmoi'
 complete -F __start_chezmoi cm
@@ -159,7 +161,7 @@ function update() {
                 ;;
         esac
     fi
-    ansible_path="/home/${USER}/documents/scm/popos_install_2404/ansible"
+    ansible_path="${scm_path}/popos_install_2404/ansible"
     inventory="${ansible_path}/localhost"
     playbook="${ansible_path}/main.yml"
     ansible-playbook "${playbook}" -i "${inventory}" -t ${tags} -e main_user=${USER} --ask-become-pass
