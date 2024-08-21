@@ -23,8 +23,7 @@ jq -c '.folders[]' "${JSON_FILE}" | while IFS= read -r folder; do
 
     # Call the syncthing command with the extracted variables
     syncthing cli config folders add --id "${id}" --label "${label}" --path "${path}"
-    syncthing cli config folders "${label}" devices add --device-id "${CONTROL_NODE}"
+    # syncthing cli config folders "${label}" devices add --device-id "${CONTROL_NODE}"  # FIXME
 done
 
-echo "syncthing device id"
-syncthing --device-id
+echo "Device Id: $(syncthing --device-id)"
