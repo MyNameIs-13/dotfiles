@@ -1,10 +1,7 @@
 ## TODO
+- create readme
 - autologin
-- apps
-- keepass autostart (&auto unlock)
-- syncthing
-- noise suppression
-- ssh
+- app configs (steam, lutirs, thunderbird, brave, joplin, ...)
+- keepass autostart minimize (&auto unlock)
 - remove confirm prompt for shutdown, restart
 - replace skodo with chezmoi username in all files (except oh-my-posh config)
-- git auth token
