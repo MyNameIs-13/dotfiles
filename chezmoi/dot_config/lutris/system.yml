@@ -1,0 +1,6 @@
+system:
+  gamescope: true
+  gamescope_game_res: 1280x800
+  gamescope_output_res: 1920x1200
+  locale: ''
+  mangohud: true
