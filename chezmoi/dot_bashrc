@@ -144,8 +144,14 @@ function b64(){
 
 function update() {
     tags="gui,home"
-    if [[ "${HOST_NAME}" == *"vm"* ]]; then
+    if [[ "${HOSTNAME}" == *"vm"* ]]; then
         tags+=",vm"
+    fi
+    if [[ "${HOSTNAME}" == *"framework"* ]]; then
+        tags+=",framework"
+    fi
+    if [[ "${HOSTNAME}" == *"fw"* ]]; then
+        tags+=",framework"
     fi
     if command -v dmidecode &> /dev/null; then
         chassis_type=$(sudo dmidecode -s chassis-type)
