@@ -1,7 +1,8 @@
 sourceDir: "{{ .chezmoi.config.sourceDir }}"
 workingTree: "{{ joinPath .chezmoi.config.sourceDir ".." }}"
 edit:
-  command: "zed --wait"
+  command: zed
+  args: "--wait"
   watch: true
 git:
   autocommit: false
