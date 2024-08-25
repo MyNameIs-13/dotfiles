@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=chezmoiapply
-GenericName=chezmoiapply
-Comment=chezmoi apply to fix compose key not surviving restarts
-Exec=/usr/bin/chezmoi apply --force
-Type=Application

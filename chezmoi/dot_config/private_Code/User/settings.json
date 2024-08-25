@@ -1,0 +1,8 @@
+{
+    "editor.fontFamily": "'Hack Nerd Font Propo', 'monospace', monospace",
+    "editor.tabCompletion": "on",
+    "git.autofetch": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.startupEditor": "none",
+    "update.mode": "manual"
+}

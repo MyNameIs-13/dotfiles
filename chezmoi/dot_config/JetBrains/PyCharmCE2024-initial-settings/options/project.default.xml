@@ -1,0 +1,27 @@
+<application>
+  <component name="ProjectManager">
+    <defaultProject>
+      <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font"
+  }
+}]]></component>
+      <component name="TaskManager">
+        <task active="true" id="Default" summary="Default task">
+          <created>1724353755697</created>
+          <option name="number" value="Default" />
+          <option name="presentableId" value="Default" />
+          <updated>1724353755697</updated>
+        </task>
+        <servers />
+      </component>
+      <component name="VcsDirectoryMappings" defaultProject="true" />
+      <component name="WindowStateProjectService">
+        <state x="813" y="260" key="SettingsEditor" timestamp="1724353814555">
+          <screen x="0" y="0" width="1805" height="1203" />
+        </state>
+        <state x="813" y="260" key="SettingsEditor/0.0.1805.1203" timestamp="1724353814555" />
+      </component>
+    </defaultProject>
+  </component>
+</application>

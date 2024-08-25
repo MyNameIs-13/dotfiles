@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Thunderbird
+GenericName=Mail Client
+Exec="/usr/bin/thunderbird"
+Terminal=false
+Icon=Thunderbird
+Categories=Network
+Type=Application
+StartupNotify=false

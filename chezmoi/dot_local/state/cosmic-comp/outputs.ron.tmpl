@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.hostname "framework"  }}(
+{{ if or (contains "fw" .chezmoi.hostname) (eq .chezmoi.hostname "framework") }}(
     config: {
         [
             (
@@ -18,4 +18,4 @@
             ),
         ],
     },
-){{- end }}
+){{- end -}}

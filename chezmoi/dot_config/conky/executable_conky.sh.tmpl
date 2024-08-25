@@ -1,0 +1,17 @@
+#!/bin/bash
+SCRIPT_HOME="$(dirname "${BASH_SOURCE[0]}")"
+
+{{- if contains "GNOME" (output "echo" "$XDG_CURRENT_DESKTOP") }}
+gsettings reset org.gnome.desktop.interface text-scaling-factor
+{{- end }}
+killall conky
+
+while true; do
+    if (: >/dev/tcp/8.8.8.8/53) >/dev/null 2>&1; then
+        break
+    else
+        sleep 1
+    fi
+done
+
+conky -d -c "${SCRIPT_HOME}/conkyrc" &

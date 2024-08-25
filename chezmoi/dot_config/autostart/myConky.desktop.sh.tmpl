@@ -1,0 +1,11 @@
+{{ if or (contains "desktop" .chezmoi.hostname) (eq .chezmoi.hostname "mean-machine") }}
+[Desktop Entry]
+Type=Application
+Exec=/home/{{ .chezmoi.username }}/.config/conky/conky.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Phase=Application
+Name=Conky
+Comment=Start conky script
+{{- end }}

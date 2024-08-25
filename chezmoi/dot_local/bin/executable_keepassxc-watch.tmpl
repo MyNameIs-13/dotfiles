@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# KeepassXC watch for login and unlock a database
+
+{{- if contains "GNOME" (output "echo" "$XDG_CURRENT_DESKTOP") }}
+dbus-monitor --session "type=signal,interface=org.gnome.ScreenSaver" |
+  while read MSG; do
+    LOCK_STAT=`echo $MSG | grep boolean | awk '{print $2}'`
+    if [[ "$LOCK_STAT" == "false" ]]; then
+        /home/{{ .chezmoi.username }}/.local/bin/keepassxc-unlock
+    fi
+  done
+{{- end }}

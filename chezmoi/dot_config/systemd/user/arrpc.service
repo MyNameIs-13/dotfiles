@@ -1,0 +1,7 @@
+[Service]
+Type=simple
+ExecStart=/bin/bash -c '/usr/bin/node src'
+WorkingDirectory=/usr/local/arrpc
+
+[Install]
+WantedBy=default.target

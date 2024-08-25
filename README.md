@@ -10,15 +10,29 @@ personal dotfiles and other user specific configurations
 ## Install
 
 ```bash
-git clone https://github.com/MyNameIs-13/dotfiles.git "${GIT_PATH}/../dotfiles"
-chezmoi init --apply --source "${GIT_PATH}/../dotfiles/chezmoi"
+git clone https://github.com/MyNameIs-13/dotfiles.git "~/documents/scm/dotfiles"
+chezmoi init --apply --source "~/documents/scm/dotfiles/chezmoi"
 ```
 
 ## Post Install steps
 
+### KeepassXC
+
+- Tools
+  - Settings
+    - Browser integration
+      - Enable integration for these browsers: Brave
+
 ### Syncthing
 
 open syncthing `https://192.168.1.2:8384/` and share folders to start synchronization
+
+### Lutris
+
+- +
+  - Add Game
+    - Search the Lutris website for installer: battle.net
+      - follow on screen instructions (default options)
 
 ### Steam
 
@@ -29,75 +43,97 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
     - 24-hour clock: enable
     - Start Up Location: Library
     - Notify me about additions or changes to my games, new releases, and upcoming releases: disable
+  - Downloads
+    - Display download rates in bits per second: disable
   - Storage
     - Add drive: ~/games
       - ~/games: set default
   - Compatibility
     - Enable Steam Play for all other titles: enable
 
-add game parameter like this to each game
-```text
-# non-popengl
-gamemoderun gamescope -w 1920 -h 1080 -W 3440 -H 1440 -b -- env MANGOHUD=1 %command%
+- install desired games
+- add game parameters similar to this to each game (gamescope is optional)
 
-# opengl
-gamemoderun gamescope -w 1920 -h 1080 -W 3440 -H 1440 -b -- mangohud --dlsym %command%
-```
+    ```text
+    # non-opengl
+    gamemoderun gamescope -w 1280 -h 800 -W 1920 -H 1200 -f -- env MANGOHUD=1 %command%
 
-### KeepassXC
-
-todo -> ansible?
+    # opengl
+    gamemoderun gamescope -w 1280 -h 800 -W 1920 -H 1200 -f -- mangohud --dlsym %command%
+    ```
 
 ### Thunderbird
 
-todo -> ansible?
+todo
 
 ### Brave
 
-todo -> ansible?
+- Settings
+  - Search engine
+    - Manage search engine and site search
+      - Search engines:
+        - Google: remove
+        - Qwant: remove
+        - Bing: remove
+      - Site search: Add
+        - Name: POE Wiki
+        - Shortcut: @poe
+        - URL: `https://www.poewiki.net/index.php?title=Special:Search&search=%s`
+- open `chatgpt.com`
+  - Rightclik tab: Pin
+- keepassxc extension
+  - connect
 
 ### Joplin
 
 - Delete default Notebooks
 - Tools -> Options
   - Synchronization
-    - Nextcloud password: set/
+    - Nextcloud password: set
   - Backup
     - path: ~/.config/joplin-desktop/JoplinBackup
 
-remove `~/JoplinBackup`
-
 ### Pycharm
 
-todo
+- Customize
+  - Import Settings...
+    - `~/.config/JetBrains/PyCharmCE2024-initial-settings`
 
-### Code
-
-todo
-
-### Gimp
+### Nextcloud desktop
 
 todo
 
-### OBS
+### KDEConnect
 
-todo
-
-### Kdenlive
-
-todo
+- Open KDEConnect on smartphone
+  - Pair new device
+    - Add devices by IP
+      - Add device IP
+        - Perform handshake
 
 ## TODO
 
-- app configs (steam, lutirs, thunderbird, brave, joplin, ...
-- replace skodo with chezmoi username in all files (except oh-my-posh config)
+- keyboard shortcut application
 - add conditions for machine differences in config files
   - add Steamdeck configs
   - add mean-machine configs
-- autologin
-- keepass start minimized (&auto unlock)
-- remove confirm prompt for shutdown, restart
-- Noise compression
-- aocd
-- discover overlay
-- nextcloud
+    - different monitor layout
+    - different OBS setup
+    - conky
+      - adopt secret tool entries (maybe save own?)
+      - adapt to COSMIC
+    - tv_screen_mode adapt for COSMIC
+- doesn't seem possible (yet)
+  - calendar integration
+  - configure bluetooth devices
+  - panel applet to display hardware state and network
+    - https://github.com/edfloreshz/cosmic-project-collection?tab=readme-ov-file
+  - touchpad gestures
+  - discover overlay
+  - autologin
+  - thunderbird
+    - start minimized
+  - keepassxc
+    - start minimized
+    - unlock database when screenlock is over
+  - remove confirm prompt for shutdown, restart

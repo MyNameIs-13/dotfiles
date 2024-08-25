@@ -1,0 +1,22 @@
+#!/bin/bash
+# Get password using secret-tool and unlock keepassxc
+
+tmp_passwd=$(secret-tool lookup application keepassxc-auto-unlock)
+database={{ .kdbx_file | quote }}
+keyfile={{ .kdbx_keyfile | quote }}
+
+if ! pidof -x "/usr/bin/keepassxc" 2&>/dev/null; then
+    /usr/bin/keepassxc&
+    sleep 3
+fi
+
+if [ ! -f "${database}" ]; then
+	exit 1
+fi
+
+while ! pidof -x "/usr/bin/keepassxc" 2&>/dev/null; do
+    sleep 1
+done
+
+dbus-send --print-reply --dest=org.keepassxc.KeePassXC.MainWindow /keepassxc org.keepassxc.KeePassXC.MainWindow.openDatabase \
+string:$database string:$tmp_passwd string:$keyfile

@@ -1,0 +1,15 @@
+[Unit]
+Description=combines two microphone into Mixed-Microphone source
+After=pipewire.service
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'mixMics.sh'
+WorkingDirectory=/home/{{ .chezmoi.username }}/.config/pipewire
+ExecStop=/bin/bash -c 'pactl unload-module module-remap-source && pactl unload-module module-loopback && pactl unload-module module-null-sink'
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target

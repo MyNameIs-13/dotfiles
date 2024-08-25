@@ -8,6 +8,7 @@
 // command palette
 
 {
+  "auto_update": false,
   "auto_install_extensions": {
     "basher": true,
     "html": true,
