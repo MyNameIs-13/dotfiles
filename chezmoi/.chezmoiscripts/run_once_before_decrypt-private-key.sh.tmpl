@@ -1,14 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ ! -f "/home/${USER}/.config/chezmoi/keyfile" ]; then
     mkdir -p "/home/${USER}/.config/chezmoi"
-    cmd="
-    chezmoi age decrypt --output \"/home/${USER}/.config/chezmoi/keyfile" --passphrase "{{ .chezmoi.workingTree }}/keyfile.age\""
+
     # Initialize the attempt counter
     attempt=1
     max_attempts=3
-
-    while ! $cmd; do
+    
+    chezmoi age decrypt --output "/home/${USER}/.config/chezmoi/keyfile" --passphrase "{{ .chezmoi.workingTree }}/keyfile.age"
+    while ! $_; do
         if [ $attempt -ge $max_attempts ]; then
             echo "Command failed after $attempt attempts. Exiting."
             break
@@ -16,6 +16,7 @@ if [ ! -f "/home/${USER}/.config/chezmoi/keyfile" ]; then
         echo "Command failed. Retrying..."
         attempt=$((attempt+1))
         sleep 1  # Optional: wait 1 second before retrying
+        chezmoi age decrypt --output "/home/${USER}/.config/chezmoi/keyfile" --passphrase "{{ .chezmoi.workingTree }}/keyfile.age"
     done
     chmod 600 "/home/${USER}/.config/chezmoi/keyfile"
 fi

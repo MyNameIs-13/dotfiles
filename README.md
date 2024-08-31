@@ -16,6 +16,10 @@ chezmoi init --apply --source "~/documents/scm/dotfiles/chezmoi"
 
 ## Post Install steps
 
+### Disks
+
+- Unlock locked partitions and drives
+
 ### KeepassXC
 
 - Tools
@@ -29,7 +33,7 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
 
 ### Lutris
 
-- +
+- `+`
   - Add Game
     - Search the Lutris website for installer: battle.net
       - follow on screen instructions (default options)
@@ -62,10 +66,6 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
     gamemoderun gamescope -w 1280 -h 800 -W 1920 -H 1200 -f -- mangohud --dlsym %command%
     ```
 
-### Thunderbird
-
-todo
-
 ### Brave
 
 - Settings
@@ -79,8 +79,6 @@ todo
         - Name: POE Wiki
         - Shortcut: @poe
         - URL: `https://www.poewiki.net/index.php?title=Special:Search&search=%s`
-- open `chatgpt.com`
-  - Rightclik tab: Pin
 - keepassxc extension
   - connect
 
@@ -101,7 +99,11 @@ todo
 
 ### Nextcloud desktop
 
-todo
+- Log in
+  - Skip folders configuration
+- Settings
+  - General
+    - Launch on system startup: disable
 
 ### KDEConnect
 
@@ -111,23 +113,47 @@ todo
       - Add device IP
         - Perform handshake
 
+### Virtual Machine Manager
+
+- Edit
+  - Preferences
+    - General
+      - Enable XML editing
+- File
+  - New Virtual Machine
+    - Forward
+      - Browse
+        - default
+          - Stop Pool
+          - Delete Pool
+        - `+` Add Pool
+          - Name: default
+          - Target Path: `/home/${USER}/virtual-machines`
+        - `+` Add Pool
+          - Name: downloads
+          - Target Path: `/home/${USER}/downloads`
+
+### Vesktop
+
+- User Settings
+  - Voice & Audio
+    - Echo Cancellation: disable
+    - Noise Suppression: None
+    - Automatic Gain Control: disable
+
 ## TODO
 
 - keyboard shortcut application
 - add conditions for machine differences in config files
   - add Steamdeck configs
-  - add mean-machine configs
-    - different monitor layout
-    - different OBS setup
-    - conky
-      - adopt secret tool entries (maybe save own?)
-      - adapt to COSMIC
-    - tv_screen_mode adapt for COSMIC
 - doesn't seem possible (yet)
+  - tv_screen_mode adapt for COSMIC
+    - reload session
+  - conky
+    - start at correct position
+    - do not show in dock
   - calendar integration
-  - configure bluetooth devices
-  - panel applet to display hardware state and network
-    - https://github.com/edfloreshz/cosmic-project-collection?tab=readme-ov-file
+  - show battery percentage in panel
   - touchpad gestures
   - discover overlay
   - autologin
@@ -135,5 +161,6 @@ todo
     - start minimized
   - keepassxc
     - start minimized
+    - lock database when screen locked
     - unlock database when screenlock is over
   - remove confirm prompt for shutdown, restart

@@ -145,19 +145,25 @@ function b64(){
 
 function update() {
     tags="gui,home"
-    if command -v dmidecode &> /dev/null; then
-        chassis_type=$(sudo dmidecode -s chassis-type)
-        case "${chassis_type}" in
-            "Notebook" | "Portable" | "Laptop")
-                tags+=",laptop"
-                ;;
-            "Desktop" | "Tower" | "Mini Tower" | "Desktop or Tower")
-                tags+=",desktop"
-                ;;
-            *)
-                echo "Unknown chassis type: ${chassis_type}"
-                ;;
-        esac
+    if [[ "${HOSTNAME}" == "mean-machine" ]]; then
+        tags+=",desktop"
+    elif [[ "${HOSTNAME}" == "framework" ]]; then
+        tags+=",laptop"
+    else
+        if command -v dmidecode &> /dev/null; then
+            chassis_type=$(sudo dmidecode -s chassis-type)
+            case "${chassis_type}" in
+                "Notebook" | "Portable" | "Laptop")
+                    tags+=",laptop"
+                    ;;
+                "Desktop" | "Tower" | "Mini Tower" | "Desktop or Tower")
+                    tags+=",desktop"
+                    ;;
+                *)
+                    echo "Unknown chassis type: ${chassis_type}"
+                    ;;
+            esac
+        fi
     fi
     ansible_path="${scm_path}/popos_install_2404/ansible"
     inventory="${ansible_path}/localhost"
@@ -170,33 +176,31 @@ function update() {
     echo -e "${BOLD}++++ dotfiles updated ++++${NORMAL}\n\n"
 }
 
+function show_sync_conflict() {
+    find "$1" -name *.sync-conflict-*
+}
+
+function rm_sync_conflict() {
+    show_sync_conflict "$1"
+    find "$1" -name *.sync-conflict-* -delete
+    echo "${BOLD}deleted${NORMAL}"
+}
+
 function tv_screen_mode() {
     if [[ $(hostname) == "mean-machine" ]]; then
         if [[ $1 == "off" ]]; then
-{{- if contains "GNOME" (output "echo" "$XDG_CURRENT_DESKTOP") }}
-            gsettings set org.gnome.desktop.interface cursor-size 24
-            gsettings reset org.gnome.desktop.interface text-scaling-factor
-
-            xrandr --output DisplayPort-0 --mode 2560x1440 --pos 1920x0 --refresh 143.91 --primary  \
-               --output DisplayPort-2 --mode 1920x1080 --pos 0x360 --refresh 144.00 \
-               --output DisplayPort-1 --mode  800x480  --pos 4480x960 \
-               --output HDMI-A-0 --off
-{{- end }}
-            pactl set-default-sink alsa_output.usb-SteelSeries_Arctis_Pro_Wireless-00.stereo-game
+            chezmoi apply --force
+            # TODO reload session
+            pactl set-default-sink "alsa_output.usb-SteelSeries_Arctis_Pro_Wireless-00.stereo-game"
             sleep 5
-            . /home/$USER/.config/conky/conky.sh
+            . /home/$USER/.config/conky/conky.sh 2&>/dev/null
         else
             killall conky
-            pactl set-default-sink alsa_output.pci-0000_2d_00.1.hdmi-stereo-extra3
-{{- if contains "GNOME" (output "echo" "$XDG_CURRENT_DESKTOP") }}
-            xrandr --output DisplayPort-0 --off  \
-               --output DisplayPort-2 --off \
-               --output DisplayPort-1 --off \
-               --output HDMI-A-0 --mode 3840x2160 --primary
-
-            gsettings set org.gnome.desktop.interface text-scaling-factor 2.0
-            gsettings set org.gnome.desktop.interface cursor-size 96
-{{- end }}
+            pactl set-default-sink "alsa_output.pci-0000_2d_00.1.hdmi-stereo"
+            echo '["Panel","Dock"]' > /home/${USER}/.config/cosmic/com.system76.CosmicPanel/v1/entries
+            echo 'All' > /home/${USER}/.config/cosmic/com.system76.CosmicPanel.Panel/v1/output
+            cp /home/${USER}/.local/state/cosmic-comp/outputs-tvmode.ron /home/${USER}/.local/state/cosmic-comp/outputs.ron
+            # TODO reload session
         fi
     fi
 }

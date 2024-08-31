@@ -585,10 +585,10 @@
         "MentionAvatars": {
             "enabled": false
         },
-        "ShowAllRoles": {
+        "YoutubeAdblock": {
             "enabled": false
         },
-        "YoutubeAdblock": {
+        "AlwaysExpandRoles": {
             "enabled": false
         }
     },
@@ -602,6 +602,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1722962107024
+        "settingsSyncVersion": 1724949265251
     }
 }

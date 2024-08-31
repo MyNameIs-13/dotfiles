@@ -18,4 +18,114 @@
             ),
         ],
     },
-){{- end -}}
+)
+{{- else -}}
+(
+    config: {
+        [
+            (
+                connector: "DP-1",
+                make: "Unknown",
+                model: "Unknown",
+            ),
+            (
+                connector: "DP-2",
+                make: "Unknown",
+                model: "MPI5008",
+            ),
+            (
+                connector: "DP-3",
+                make: "Unknown",
+                model: "24G1WG4",
+            ),
+            (
+                connector: "HDMI-A-1",
+                make: "Unknown",
+                model: "Unknown",
+            ),
+        ]: [
+            (
+                mode: ((2560, 1440), Some(143912)),
+                vrr: false,
+                scale: 1.0,
+                transform: Normal,
+                position: (1920, 1920),
+                enabled: true,
+                max_bpc: Some(16),
+            ),
+            (
+                mode: ((800, 480), Some(59977)),
+                vrr: false,
+                scale: 1.0,
+                transform: Normal,
+                position: (4480, 2880),
+                enabled: true,
+                max_bpc: Some(16),
+            ),
+            (
+                mode: ((1920, 1080), Some(144001)),
+                vrr: false,
+                scale: 1.0,
+                transform: Normal,
+                position: (0, 2064),
+                enabled: true,
+                max_bpc: Some(16),
+            ),
+            (
+                mode: ((3840, 2160), Some(60000)),
+                vrr: false,
+                scale: 2.0,
+                transform: Normal,
+                position: (0, 2280),
+                enabled: false,
+                max_bpc: Some(16),
+            ),
+        ],
+        [
+            (
+                connector: "DP-1",
+                make: "Unknown",
+                model: "Unknown",
+            ),
+            (
+                connector: "DP-2",
+                make: "Unknown",
+                model: "MPI5008",
+            ),
+            (
+                connector: "DP-3",
+                make: "Unknown",
+                model: "24G1WG4",
+            ),
+        ]: [
+            (
+                mode: ((2560, 1440), Some(143912)),
+                vrr: false,
+                scale: 1.0,
+                transform: Normal,
+                position: (2560, 0),
+                enabled: true,
+                max_bpc: Some(16),
+            ),
+            (
+                mode: ((800, 480), Some(59977)),
+                vrr: false,
+                scale: 1.0,
+                transform: Normal,
+                position: (5120, 960),
+                enabled: true,
+                max_bpc: Some(16),
+            ),
+            (
+                mode: ((1920, 1080), Some(144001)),
+                vrr: false,
+                scale: 1.0,
+                transform: Normal,
+                position: (640, 0),
+                enabled: true,
+                max_bpc: Some(16),
+            ),
+        ],
+    },
+)
+{{- end -}}
