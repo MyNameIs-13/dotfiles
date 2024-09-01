@@ -1,11 +1,23 @@
 {
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Tab",
+    ): System(WorkspaceOverview),
 {{- if or (contains "desktop" .chezmoi.hostname) (eq .chezmoi.hostname "mean-machine") }}
     (
         modifiers: [],
         key: "Insert",
         description: Some("Toggle USB Mic"),
-    ): Spawn("pactl set-source-mute \"alsa_input.usb-0c76_USB_PnP_Audio_Device-00.mono-fallback\" toggle"),
+    ): Spawn("/usr/bin/pactl set-source-mute \"alsa_input.usb-0c76_USB_PnP_Audio_Device-00.mono-fallback\" toggle"),
 {{- end }}
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "k",
+    ): Disable,
     (
         modifiers: [
             Super,
@@ -24,8 +36,15 @@
         modifiers: [
             Super,
         ],
-        key: "e",
-    ): System(HomeFolder),
+        key: "l",
+    ): System(LockScreen),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "z",
+        description: Some("pop-shell-shortcuts"),
+    ): Spawn("/usr/local/bin/pop-shell-shortcuts"),
     (
         modifiers: [
             Super,
@@ -38,24 +57,27 @@
         modifiers: [
             Super,
         ],
+        key: "f",
+        description: Some("cosmic-edit"),
+    ): Spawn("/usr/bin/cosmic-edit"),
+    (
+        modifiers: [
+            Ctrl,
+            Shift,
+        ],
+        key: "Escape",
+        description: Some("Sytem Monitor"),
+    ): Spawn("/usr/bin/gnome-system-monitor"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "e",
+    ): System(HomeFolder),
+    (
+        modifiers: [
+            Super,
+        ],
         key: "h",
     ): Minimize,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "k",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "f",
-    ): Spawn("cosmic-edit"),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "l",
-    ): System(LockScreen),
 }

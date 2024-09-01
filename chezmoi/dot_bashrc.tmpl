@@ -189,9 +189,15 @@ function rm_sync_conflict() {
 function tv_screen_mode() {
     if [[ $(hostname) == "mean-machine" ]]; then
         if [[ $1 == "off" ]]; then
-            chezmoi apply --force
-            # TODO reload session
+            killall conky
+            cp /home/${USER}/.local/state/cosmic-comp/outputs-desktop.ron /home/${USER}/.local/state/cosmic-comp/outputs.ron
+            cosmic-randr enable DP-1 && cosmic-randr mode --refresh 143.912 --pos-x 1920 --pos-y 0 --scale 100 DP-1 2560 1440
+            cosmic-randr enable DP-2 && cosmic-randr mode --refresh 59.977 --pos-x 3558 --pos-y 1440 --scale 1 DP-2 800 480
+            cosmic-randr enable DP-3 && cosmic-randr mode --refresh 144.001 --pos-x 0 --pos-y 180 --scale 100 DP-3 1920 1080
+            cosmic-randr disable HDMI-A-1
             pactl set-default-sink "alsa_output.usb-SteelSeries_Arctis_Pro_Wireless-00.stereo-game"
+            echo '["Panel","Dock","PanelExtra"]' > /home/${USER}/.config/cosmic/com.system76.CosmicPanel/v1/entries
+            echo 'Name("DP-1")' > /home/${USER}/.config/cosmic/com.system76.CosmicPanel.Panel/v1/output
             sleep 5
             . /home/$USER/.config/conky/conky.sh 2&>/dev/null
         else
@@ -199,8 +205,11 @@ function tv_screen_mode() {
             pactl set-default-sink "alsa_output.pci-0000_2d_00.1.hdmi-stereo"
             echo '["Panel","Dock"]' > /home/${USER}/.config/cosmic/com.system76.CosmicPanel/v1/entries
             echo 'All' > /home/${USER}/.config/cosmic/com.system76.CosmicPanel.Panel/v1/output
-            cp /home/${USER}/.local/state/cosmic-comp/outputs-tvmode.ron /home/${USER}/.local/state/cosmic-comp/outputs.ron
-            # TODO reload session
+            cp /home/${USER}/.local/state/cosmic-comp/outputs-tv.ron /home/${USER}/.local/state/cosmic-comp/outputs.ron
+            cosmic-randr enable HDMI-A-1 && cosmic-randr mode --refresh 60.000 --pos-x 4480 --pos-y 0 --scale 200 HDMI-A-1 3840 2160
+            cosmic-randr disable DP-3
+            cosmic-randr disable DP-2
+            cosmic-randr disable DP-1
         fi
     fi
 }

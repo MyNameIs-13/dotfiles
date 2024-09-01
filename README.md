@@ -18,7 +18,13 @@ chezmoi init --apply --source "~/documents/scm/dotfiles/chezmoi"
 
 ### Disks
 
-- Unlock locked partitions and drives
+- Select Disk with encrypted partitions
+  - Select encrypted partition
+    - Settings icon
+      - Edit Encryption Options...
+        - User Session Defaults: disable
+        - Name: virtual-machines/archive (depending on which one)
+        - Passphrase: from keepass
 
 ### KeepassXC
 
@@ -143,12 +149,11 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
 
 ## TODO
 
-- keyboard shortcut application
 - add conditions for machine differences in config files
   - add Steamdeck configs
 - doesn't seem possible (yet)
   - tv_screen_mode adapt for COSMIC
-    - reload session
+    - constant crashes of cosmic-randr
   - conky
     - start at correct position
     - do not show in dock
