@@ -57,7 +57,7 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
     - Display download rates in bits per second: disable
   - Storage
     - Add drive: ~/games
-      - ~/games: set default
+      - ~/games: make default
   - Compatibility
     - Enable Steam Play for all other titles: enable
 
