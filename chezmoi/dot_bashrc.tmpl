@@ -166,7 +166,7 @@ function update() {
         fi
     fi
     ansible_path="${scm_path}/popos_install_2404/ansible"
-    inventory="${ansible_path}/localhost"
+    inventory="${ansible_path}/localhost.yml"
     playbook="${ansible_path}/main.yml"
     ansible-playbook "${playbook}" -i "${inventory}" -T 60 -t ${tags} -e main_user={{ .chezmoi.username }} --ask-become-pass
     echo -e "______________________"

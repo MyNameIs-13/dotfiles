@@ -706,7 +706,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": " {{ if .Root }}${{ else }}❯{{ end }}",
+          "template": " {{ if .Root }}#{{ else }}❯{{ end }}",
           "type": "text"
         }
       ]

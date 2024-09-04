@@ -65,10 +65,22 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
 - add game parameters similar to this to each game (gamescope is optional)
 
     ```text
-    # non-opengl
-    gamemoderun gamescope -w 1280 -h 800 -W 1920 -H 1200 -f -- env MANGOHUD=1 %command%
+    # laptop
+    gamemoderun gamescope -e -w 1280 -h 800 -W 1920 -H 1200 -f %command%
 
-    # opengl
+    # general desktop
+    gamemoderun gamescope -e -w 2560 -h 1440 -f %command%
+
+    # grim dawn desktop
+    gamemoderun gamescope -e -w 2560 -h 1440 --force-windows-fullscreen -f %command%
+
+    # Enshrouded desktop
+    gamemoderun %command%
+
+    # POE desktop
+    gamemoderun gamescope -e -w 2552 -h 1080 --force-windows-fullscreen --mangoapp -f %command%
+
+    # opengl games
     gamemoderun gamescope -w 1280 -h 800 -W 1920 -H 1200 -f -- mangohud --dlsym %command%
     ```
 
