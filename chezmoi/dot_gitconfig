@@ -1,8 +1,6 @@
 [user]
 	name = MyNameIs-13
 	email = g.s@writeme.com
-[safe]
-	directory = /opt
 [credential]
 	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 	helper = oauth

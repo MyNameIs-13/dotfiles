@@ -10,20 +10,24 @@
 {
   "auto_update": false,
   "auto_install_extensions": {
+    "ansible": true,
     "basher": true,
-    "html": true,
-    "nix": true,
-    "vala": true,
     "docker-compose": true,
-    "ini": true,
-    "powershell": true,
-    "xml": true,
     "env": true,
-    "markdown-oxide": true,
-    "ron": true,
     "git-firefly": true,
+    "html": true,
+    "ini": true,
+    "just": true,
+    "make": true,
+    "markdown-oxide": true,
     "meson": true,
-    "terraform": true
+    "nix": true,
+    "powershell": true,
+    "ron": true,
+    "terraform": true,
+    "toml": true,
+    "vala": true,
+    "xml": true
   },
   "hour_format": "hour24",
   "tabs": {
@@ -55,5 +59,23 @@
     "font_family": "Hack Nerd Font Propo",
     "font_size": 13
   },
-  "ensure_final_newline_on_save": false
+  "ensure_final_newline_on_save": false,
+  "file_types": {
+    "Ansible": [
+      "**.ansible.yml",
+      "**/defaults/**.yml",
+      "**/defaults/**.yaml",
+      "**/meta/**.yml",
+      "**/meta/**.yaml",
+      "**/tasks/**.yml",
+      "**/tasks/*.yml",
+      "**/tasks/*.yaml",
+      "**/handlers/*.yml",
+      "**/handlers/*.yaml",
+      "**/group_vars/**.yml",
+      "**/group_vars/**.yaml",
+      "**playbook*.yaml",
+      "**playbook*.yml"
+    ]
+  }
 }

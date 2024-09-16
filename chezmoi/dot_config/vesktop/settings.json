@@ -9,5 +9,9 @@
     "spellCheckLanguages": [
         "en-US",
         "en"
-    ]
+    ],
+    "customTitleBar": false,
+    "enableMenu": false,
+    "splashTheming": true,
+    "staticTitle": false
 }
