@@ -8,7 +8,7 @@
 {{- if or (contains "desktop" .chezmoi.hostname) (eq .chezmoi.hostname "mean-machine") }}
     (
         modifiers: [],
-        key: "Insert",
+        key: "Scroll_Lock",
         description: Some("Toggle USB Mic"),
     ): Spawn("/usr/bin/pactl set-source-mute \"alsa_input.usb-0c76_USB_PnP_Audio_Device-00.mono-fallback\" toggle"),
 {{- end }}
