@@ -168,7 +168,7 @@ function update() {
     ansible_path="${scm_path}/popos_install_2404/ansible"
     inventory="${ansible_path}/hosts.yml"
     playbook="${ansible_path}/main.yml"
-    ansible-playbook "${playbook}" -i "${inventory}" -T 60 -t ${tags} -e main_user={{ .chezmoi.username }} --ask-become-pass
+    sudo ansible-playbook "${playbook}" -i "${inventory}" -T 60 -t ${tags} -e main_user={{ .chezmoi.username }}
     echo -e "______________________"
     echo -e "${BOLD}++++ system updated ++++${NORMAL}\n\n"
     chezmoi apply
