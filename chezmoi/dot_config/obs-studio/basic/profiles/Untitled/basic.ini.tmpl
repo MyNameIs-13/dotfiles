@@ -129,7 +129,7 @@ LowLatencyEnable=false
 IgnoreRecommended=false
 
 [SimpleOutput]
-FilePath=/home/skodo/multimedia/OBS Recordings
+FilePath=/home/{{ .chezmoi.username }}/multimedia/OBS Recordings
 RecFormat2=mkv
 VBitrate=2500
 ABitrate=160
@@ -154,14 +154,14 @@ TrackIndex=1
 VodTrackIndex=2
 Encoder=obs_x264
 RecType=Standard
-RecFilePath=/home/skodo
+RecFilePath=/home/{{ .chezmoi.username }}
 RecFormat2=mkv
 RecUseRescale=false
 RecTracks=1
 RecEncoder=none
 FLVTrack=1
 FFOutputToFile=true
-FFFilePath=/home/skodo
+FFFilePath=/home/{{ .chezmoi.username }}
 FFVBitrate=2500
 FFVGOPSize=250
 FFUseRescale=false
