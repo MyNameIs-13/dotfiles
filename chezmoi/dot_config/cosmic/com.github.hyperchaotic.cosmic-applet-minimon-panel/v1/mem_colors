@@ -1,6 +1,22 @@
 (
-    background: 4279966491,
-    text: 4294967295,
-    ringback: 4294967295,
-    ringfont: 4286578816,
+    color1: (
+        red: 43,
+        green: 43,
+        blue: 43,
+    ),
+    color2: (
+        red: 255,
+        green: 255,
+        blue: 255,
+    ),
+    color3: (
+        red: 85,
+        green: 85,
+        blue: 85,
+    ),
+    color4: (
+        red: 187,
+        green: 41,
+        blue: 187,
+    ),
 )

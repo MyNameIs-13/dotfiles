@@ -1,5 +1,22 @@
 (
-    background: 4279966491,
-    download: 4281306623,
-    upload: 4294901760,
+    color1: (
+        red: 43,
+        green: 43,
+        blue: 43,
+    ),
+    color2: (
+        red: 47,
+        green: 141,
+        blue: 255,
+    ),
+    color3: (
+        red: 255,
+        green: 0,
+        blue: 0,
+    ),
+    color4: (
+        red: 43,
+        green: 43,
+        blue: 43,
+    ),
 )

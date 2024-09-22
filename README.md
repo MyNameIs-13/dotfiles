@@ -4,7 +4,7 @@ personal dotfiles and other user specific configurations
 
 ## Requirements
 
-- install [chezmoi](https://www.chezmoi.io/) & [ansible](https://www.ansible.com/)
+- install [chezmoi](https://www.chezmoi.io/)
 - have the passphrase for the chezmoi keyfile ready
 
 ## Install
