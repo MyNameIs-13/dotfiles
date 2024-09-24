@@ -56,7 +56,7 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
   - Downloads
     - Display download rates in bits per second: disable
   - Storage
-    - Add drive: ~/games
+    - Add drive: ~/games (might be necessary to add a directory called `SteamLibrary`)
       - ~/games: make default
   - Compatibility
     - Enable Steam Play for all other titles: enable
@@ -127,7 +127,7 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
 
 - Open KDEConnect on smartphone
   - Pair new device
-    - Add devices by IP
+    - Add devices by IP (when not working directly)
       - Add device IP
         - Perform handshake
 
@@ -154,9 +154,8 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
 ### Vesktop
 
 - User Settings
-  - Voice & Audio
+  - Voice & Video
     - Echo Cancellation: disable
-    - Noise Suppression: None
     - Automatic Gain Control: disable
 
 ## TODO
