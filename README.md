@@ -14,7 +14,7 @@ git clone https://github.com/MyNameIs-13/dotfiles.git "~/documents/scm/dotfiles"
 chezmoi init --apply --source "~/documents/scm/dotfiles/chezmoi"
 ```
 
-## Post Install steps
+## Post Install steps (non-steamdeck)
 
 ### Disks
 
@@ -180,3 +180,5 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
     - lock database when screen locked
     - unlock database when screenlock is over
   - remove confirm prompt for shutdown, restart
+
+  ## Post Install steps (steamdeck)

@@ -1,1 +1,6 @@
 key.txt.age
+{{- if eq .chezmoi.hostname "steamdeck" }}
+*
+!.config/oh-my-posh/skodo.omp.json
+!.bashrc
+{{- end }}
