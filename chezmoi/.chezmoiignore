@@ -1,6 +1,7 @@
-key.txt.age
+keyfile.age
 {{- if eq .chezmoi.hostname "steamdeck" }}
-*
-!.config/oh-my-posh/skodo.omp.json
-!.bashrc
+.config/** # ignore the contents but not the folder itself
+!.config/oh-my-posh
+.local/** # ignore the contents but not the folder itself
+.XCompose
 {{- end }}

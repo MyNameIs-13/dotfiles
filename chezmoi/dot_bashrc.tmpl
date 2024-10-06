@@ -176,7 +176,7 @@ function update() {
     echo -e "______________________"
     echo -e "${BOLD}++++ dotfiles updated ++++${NORMAL}\n\n"
 }
-{{- else -}}
+{{- else }}
 function update() {
     flatpak update -y
     echo -e "______________________"
