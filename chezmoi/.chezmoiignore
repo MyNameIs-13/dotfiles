@@ -1,7 +1,26 @@
 keyfile.age
-{{- if eq .chezmoi.hostname "steamdeck" }}
-.config/** # ignore the contents but not the folder itself
+
+{{ if eq .chezmoi.hostname "steamdeck" }}
+.chezmoiscripts/run_once_after_enable-cron-and-systemd-services.sh
+.chezmoiscripts/run_once_after_enable-cron-and-systemd-services.sh.tmpl
+.chezmoiscripts/run_once_after_get-thunderbird-profile.sh  # TODO: adapt script for other location
+.chezmoiscripts/run_once_after_syncthing-setup.sh
+.chezmoiscripts/run_once_before_keepassxc-secret.sh
+.chezmoiscripts/run_onchange_install-code-extensions.sh
+.chezmoiscripts/run_onchange_install-pycharm-plugins.sh
+
 !.config/oh-my-posh
+!.config/oh-my-posh/**
+.config/** # ignore the contents but not the folder itself
+
 .local/** # ignore the contents but not the folder itself
 .XCompose
-{{- end }}
+.thunderbird # TODO: adapt for other location
+{{ end }}
+
+{{ if eq .chezmoi.hostname "steamdeck" }}
+{{ end }}
+
+{{ if ne .chezmoi.hostname "mean-machine" }}
+.chezmoiscripts/run_once_before_mail-secrets.sh
+{{ end }}

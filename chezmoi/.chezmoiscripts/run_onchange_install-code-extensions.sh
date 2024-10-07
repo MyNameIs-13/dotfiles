@@ -1,4 +1,3 @@
-{{- if ne .chezmoi.hostname "steamdeck" }}
 #!/bin/bash
 
 extensions=(
@@ -26,4 +25,3 @@ extensions=(
 for i in "${extensions[@]}"; do
     code --install-extension "$i"
 done
-{{- end }}

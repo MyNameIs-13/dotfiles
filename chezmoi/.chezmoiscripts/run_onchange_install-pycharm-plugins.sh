@@ -1,4 +1,3 @@
-{{- if ne .chezmoi.hostname "steamdeck" }}
 #!/bin/bash
 
 plugins=(
@@ -13,4 +12,3 @@ plugins=(
 )
 
 pycharm  installPlugins "${plugins[@]}"
-{{- end }}

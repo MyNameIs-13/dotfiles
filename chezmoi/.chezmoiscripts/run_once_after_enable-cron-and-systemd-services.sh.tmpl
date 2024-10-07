@@ -1,4 +1,3 @@
-{{- if ne .chezmoi.hostname "steamdeck" }}
 #!/bin/bash
 
 systemctl --user enable --now arrpc.service
@@ -6,5 +5,4 @@ systemctl --user enable --now arrpc.service
 {{ if or (contains "desktop" .chezmoi.hostname) (eq .chezmoi.hostname "mean-machine") }}
 systemctl --user enable --now mixMics.service
 sudo crontab -l | echo "@reboot /home/${USER}/.config/conky/sysdebugAccess.sh" | sudo crontab
-{{- end }}
 {{- end }}

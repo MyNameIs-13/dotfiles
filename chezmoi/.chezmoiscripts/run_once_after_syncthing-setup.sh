@@ -1,4 +1,3 @@
-{{- if ne .chezmoi.hostname "steamdeck" }}
 #!/bin/bash
 
 # Path to your JSON file
@@ -28,4 +27,3 @@ jq -c '.folders[]' "${JSON_FILE}" | while IFS= read -r folder; do
 done
 
 echo "Device Id: $(syncthing --device-id)"
-{{- end }}

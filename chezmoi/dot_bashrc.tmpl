@@ -142,8 +142,7 @@ function b64(){
         echo -n "${first_arg}" | base64
     fi
 }
-
-{{- if ne .chezmoi.hostname "steamdeck" }}
+{{ if ne .chezmoi.hostname "steamdeck" }}
 function update() {
     tags="gui,home"
     if [[ "${HOSTNAME}" == "mean-machine" ]]; then
