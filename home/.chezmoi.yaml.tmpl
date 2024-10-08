@@ -1,7 +1,10 @@
 sourceDir: "{{ .chezmoi.config.sourceDir }}"
-workingTree: "{{ joinPath .chezmoi.config.sourceDir ".." }}"
 edit:
+{{- if eq .chezmoi.hostname "steamdeck" }}
+  command: flatpak run dev.zed.Zed
+{{- else }}
   command: zed
+{{- end }}
   args: "--wait"
   watch: true
 git:

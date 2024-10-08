@@ -1,0 +1,56 @@
+keyfile.age
+
+{{ if eq .chezmoi.hostname "framework" }}
+.chezmoiscripts/mail-secrets.sh
+.config/autostart/myConky.desktop
+.config/autostart/nextcloud.desktop
+.config/conky
+.config/cosmic/com.system76.CosmicPanel.PanelExtra
+.config/pipewire/mixMics.sh
+.config/systemd/user/mixMics.service
+.config/Nextcloud
+.local/state/outputs-desktop.ron
+.local/state/outputs-tv.ron
+{{ end }}
+
+{{ if eq .chezmoi.hostname "mean-machine" }}
+.config/cosmic/com.github.hyperchaotic.cosmic-applet-minimon-dock
+.config/cosmic/com.github.hyperchaotic.cosmic-applet-minimon-panel
+{{ end }}
+
+{{ if eq .chezmoi.hostname "steamdeck" }}
+.chezmoiscripts/enable-cron-and-systemd-services.sh
+.chezmoiscripts/enable-cron-and-systemd-services.sh
+.chezmoiscripts/get-thunderbird-profile.sh  # TODO: adapt script for other location
+.chezmoiscripts/syncthing-setup.sh
+.chezmoiscripts/keepassxc-secret.sh
+.chezmoiscripts/mail-secrets.sh
+.chezmoiscripts/install-code-extensions.sh
+.chezmoiscripts/install-pycharm-plugins.sh
+
+.config/aocd
+.config/autostart
+.config/conky
+.config/cosmic
+.config/JetBrains
+.config/joplin-desktop
+.config/keepassxc # TODO adapt for other location
+.config/lutris
+.config/MangoHud
+.config/Nextcloud
+.config/ob-studio
+.config/pipewire
+.config/Code
+.config/syncthing # TODO adapt for other location
+.config/systemd
+.config/vesktop
+.config/zed # TODO adapt for other location
+
+.local/** # ignore the contents but not the folder itself
+
+.XCompose
+
+.thunderbird # TODO: adapt for other location
+{{ else }}
+.var
+{{ end }}
