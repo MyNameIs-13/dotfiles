@@ -11,7 +11,7 @@ personal dotfiles and other user specific configurations
 
 ```bash
 git clone https://github.com/MyNameIs-13/dotfiles.git "~/documents/scm/dotfiles"
-chezmoi init --apply --source "~/documents/scm/dotfiles/chezmoi"
+chezmoi init --apply --source "~/documents/scm/dotfiles"
 ```
 
 ## Post Install steps (non-steamdeck)

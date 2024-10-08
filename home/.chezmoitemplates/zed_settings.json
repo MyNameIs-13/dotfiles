@@ -43,7 +43,11 @@
     "show": "always"
   },
   "use_autoclose": false,
+{{- if eq .chezmoi.hostname "steamdeck" }}
+  "ui_font_family": "Hack",
+{{- else }}
   "ui_font_family": "Hack Nerd Font Propo",
+{{- end }}
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {

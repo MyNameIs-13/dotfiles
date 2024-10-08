@@ -1,5 +1,9 @@
 #!/bin/bash
+{{ if eq .chezmoi.hostname "steamdeck" }}
+profile="/home/${USER}/.var/app/org.mozilla.Thunderbird/.thunderbird/37sjar31.default-esr"
+{{ else }}
 profile="/home/${USER}/.thunderbird/37sjar31.default-esr"
+{{ end }}
 
 if [[ ! -f "${profile}" ]]; then
     mkdir -p "${profile}"

@@ -2,6 +2,7 @@ keyfile.age
 
 {{ if eq .chezmoi.hostname "framework" }}
 .chezmoiscripts/mail-secrets.sh
+
 .config/autostart/myConky.desktop
 .config/autostart/nextcloud.desktop
 .config/conky
@@ -9,6 +10,7 @@ keyfile.age
 .config/pipewire/mixMics.sh
 .config/systemd/user/mixMics.service
 .config/Nextcloud
+
 .local/state/outputs-desktop.ron
 .local/state/outputs-tv.ron
 {{ end }}
@@ -20,8 +22,6 @@ keyfile.age
 
 {{ if eq .chezmoi.hostname "steamdeck" }}
 .chezmoiscripts/enable-cron-and-systemd-services.sh
-.chezmoiscripts/enable-cron-and-systemd-services.sh
-.chezmoiscripts/get-thunderbird-profile.sh  # TODO: adapt script for other location
 .chezmoiscripts/syncthing-setup.sh
 .chezmoiscripts/keepassxc-secret.sh
 .chezmoiscripts/mail-secrets.sh
@@ -44,13 +44,26 @@ keyfile.age
 .config/syncthing # TODO adapt for other location
 .config/systemd
 .config/vesktop
-.config/zed # TODO adapt for other location
+.config/zed
 
-.local/** # ignore the contents but not the folder itself
+.local/bin/keepassxc-unlock
+.local/bin/keepassxc-watch
+.local/share/applications/keepassxc-unlock.desktop
+.local/share/com.example.quickgui
+.local/share/wallpaper
+.local/state
 
 .XCompose
 
-.thunderbird # TODO: adapt for other location
+.thunderbird
+
 {{ else }}
+.chezmoiscripts/steamdeck/**
+
+.bash_profile
+
+.local/share/applications/game_mode.desktop
+.local/bin/desktop_mode.sh
+
 .var
 {{ end }}

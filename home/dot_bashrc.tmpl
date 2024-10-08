@@ -125,7 +125,9 @@ export BOLD="$(tput bold)"
 export NORMAL="$(tput sgr0)"
 export EDITOR=vim
 
+{{ if ne .chezmoi.hostname "steamdeck" }}
 eval "$(oh-my-posh init bash --config "/home/{{ .chezmoi.username }}/.config/oh-my-posh/skodo.omp.json")"
+{{ end }}
 
 alias cm='chezmoi'
 complete -F __start_chezmoi cm
