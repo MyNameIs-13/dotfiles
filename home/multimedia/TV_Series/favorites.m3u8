@@ -1,0 +1,128 @@
+#EXTM3U 
+#EXTVLCOPT--http-reconnect=true
+#EXTINF:-1,Das Erste HD
+#EXTVLCOPT:program=10301
+http://vuzero.home:8001/1:0:19:283D:3FB:1:C00000:0:0:0:
+#EXTINF:-1,ZDF HD
+#EXTVLCOPT:program=11110
+http://vuzero.home:8001/1:0:19:2B66:3F3:1:C00000:0:0:0:
+#EXTINF:-1,SAT.1
+#EXTVLCOPT:program=17500
+http://vuzero.home:8001/1:0:1:445C:453:1:C00000:0:0:0:
+#EXTINF:-1,RTL Television
+#EXTVLCOPT:program=12003
+http://vuzero.home:8001/1:0:1:2EE3:441:1:C00000:0:0:0:
+#EXTINF:-1,RTLup
+#EXTVLCOPT:program=12080
+http://vuzero.home:8001/1:0:1:2F30:441:1:C00000:0:0:0:
+#EXTINF:-1,RTLZWEI
+#EXTVLCOPT:program=12020
+http://vuzero.home:8001/1:0:1:2EF4:441:1:C00000:0:0:0:
+#EXTINF:-1,Super RTL
+#EXTVLCOPT:program=12107
+http://vuzero.home:8001/1:0:1:2F4B:A1:270F:FFFF0000:0:0:0:
+#EXTINF:-1,NITRO
+#EXTVLCOPT:program=12061
+http://vuzero.home:8001/1:0:1:2F1D:441:1:C00000:0:0:0:
+#EXTINF:-1,VOX
+#EXTVLCOPT:program=12060
+http://vuzero.home:8001/1:0:1:2F1C:441:1:C00000:0:0:0:
+#EXTINF:-1,VOXup
+#EXTVLCOPT:program=28820
+http://vuzero.home:8001/1:0:1:7094:443:1:C00000:0:0:0:
+#EXTINF:-1,ProSieben
+#EXTVLCOPT:program=17501
+http://vuzero.home:8001/1:0:1:445D:453:1:C00000:0:0:0:
+#EXTINF:-1,kabel eins
+#EXTVLCOPT:program=17502
+http://vuzero.home:8001/1:0:1:445E:453:1:C00000:0:0:0:
+#EXTINF:-1,kabel eins classics
+#EXTVLCOPT:program=13112
+http://vuzero.home:8001/1:0:1:3338:83:270F:FFFF0000:0:0:0:
+#EXTINF:-1,kabel eins Doku
+#EXTVLCOPT:program=17509
+http://vuzero.home:8001/1:0:1:4465:453:1:C00000:0:0:0:
+#EXTINF:-1,Pro7 MAXX
+#EXTVLCOPT:program=17505
+http://vuzero.home:8001/1:0:1:4461:453:1:C00000:0:0:0:
+#EXTINF:-1,SAT.1 Gold
+#EXTVLCOPT:program=17504
+http://vuzero.home:8001/1:0:1:4460:453:1:C00000:0:0:0:
+#EXTINF:-1,DMAX
+#EXTVLCOPT:program=63
+http://vuzero.home:8001/1:0:1:3F:21:85:C00000:0:0:0:
+#EXTINF:-1,Comedy Central
+#EXTVLCOPT:program=28676
+http://vuzero.home:8001/1:0:1:7004:436:1:C00000:0:0:0:
+#EXTINF:-1,WELT
+#EXTVLCOPT:program=17503
+http://vuzero.home:8001/1:0:1:445F:453:1:C00000:0:0:0:
+#EXTINF:-1,ntv
+#EXTVLCOPT:program=12090
+http://vuzero.home:8001/1:0:1:2F3A:441:1:C00000:0:0:0:
+#EXTINF:-1,3sat HD
+#EXTVLCOPT:program=11150
+http://vuzero.home:8001/1:0:19:2B8E:3F2:1:C00000:0:0:0:
+#EXTINF:-1,WDR HD Aachen
+#EXTVLCOPT:program=28333
+http://vuzero.home:8001/1:0:19:6EAD:3FD:1:C00000:0:0:0:
+#EXTINF:-1,alt_WDR HD Dortmund
+#EXTVLCOPT:program=28327
+http://vuzero.home:8001/1:0:19:6EA7:4B1:1:C00000:0:0:0:
+#EXTINF:-1,BR Fernsehen Nord HD
+#EXTVLCOPT:program=10326
+http://vuzero.home:8001/1:0:19:2856:401:1:C00000:0:0:0:
+#EXTINF:-1,MDR Sachsen HD
+#EXTVLCOPT:program=10352
+http://vuzero.home:8001/1:0:19:2870:425:1:C00000:0:0:0:
+#EXTINF:-1,SWR BW HD
+#EXTVLCOPT:program=10303
+http://vuzero.home:8001/1:0:19:283F:3FB:1:C00000:0:0:0:
+#EXTINF:-1,rbb Berlin HD
+#EXTVLCOPT:program=10351
+http://vuzero.home:8001/1:0:19:286F:425:1:C00000:0:0:0:
+#EXTINF:-1,zdf_neo HD
+#EXTVLCOPT:program=11130
+http://vuzero.home:8001/1:0:19:2B7A:3F3:1:C00000:0:0:0:
+#EXTINF:-1,ZDFinfo HD
+#EXTVLCOPT:program=11170
+http://vuzero.home:8001/1:0:19:2BA2:3F2:1:C00000:0:0:0:
+#EXTINF:-1,ONE HD
+#EXTVLCOPT:program=10376
+http://vuzero.home:8001/1:0:19:2888:40F:1:C00000:0:0:0:
+#EXTINF:-1,tagesschau24 HD
+#EXTVLCOPT:program=10375
+http://vuzero.home:8001/1:0:19:2887:40F:1:C00000:0:0:0:
+#EXTINF:-1,KiKA HD
+#EXTVLCOPT:program=11160
+http://vuzero.home:8001/1:0:19:2B98:3F2:1:C00000:0:0:0:
+#EXTINF:-1,phoenix HD
+#EXTVLCOPT:program=10331
+http://vuzero.home:8001/1:0:19:285B:401:1:C00000:0:0:0:
+#EXTINF:-1,SIXX
+#EXTVLCOPT:program=20116
+http://vuzero.home:8001/1:0:1:4E94:B5:270F:FFFF0000:0:0:0:
+#EXTINF:-1,arte HD
+#EXTVLCOPT:program=10302
+http://vuzero.home:8001/1:0:19:283E:3FB:1:C00000:0:0:0:
+#EXTINF:-1,ANIXE HD
+#EXTVLCOPT:program=21100
+http://vuzero.home:8001/1:0:19:526C:41D:1:C00000:0:0:0:
+#EXTINF:-1,ServusTV HD Deutschland
+#EXTVLCOPT:program=4914
+http://vuzero.home:8001/1:0:19:1332:3EF:1:C00000:0:0:0:
+#EXTINF:-1,SPORT1
+#EXTVLCOPT:program=900
+http://vuzero.home:8001/1:0:1:384:21:85:C00000:0:0:0:
+#EXTINF:-1,Bloomberg
+#EXTVLCOPT:program=24110
+http://vuzero.home:8001/1:0:1:5E2E:F1:270F:FFFF0000:0:0:0:
+#EXTINF:-1,MBS - Test1
+#EXTVLCOPT:program=12621
+http://vuzero.home:8001/1:0:1:314D:459:1:C00000:0:0:0:
+#EXTINF:-1,DELUXE MUSIC
+#EXTVLCOPT:program=65
+http://vuzero.home:8001/1:0:1:41:7:85:C00000:0:0:0:
+#EXTINF:-1,Nicktoons
+#EXTVLCOPT:program=21103
+http://vuzero.home:8001/1:0:1:526F:D3:270F:FFFF0000:0:0:0:

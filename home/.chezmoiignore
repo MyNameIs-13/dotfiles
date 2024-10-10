@@ -42,7 +42,8 @@ keyfile.age
 .config/pipewire
 .config/Code
 .config/syncthing # TODO adapt for other location
-.config/systemd
+.config/systemd/user/arrpc.service
+.config/systemd/user/mixMics.service
 .config/vesktop
 .config/zed
 
@@ -62,8 +63,15 @@ keyfile.age
 
 .bash_profile
 
+.config/systemd/user/syncthing.service
+.config/steamtinkerlaunch
+
 .local/share/applications/game_mode.desktop
 .local/bin/desktop_mode.sh
+
+documents/.stignore
+
+multimedia
 
 .var
 {{ end }}
