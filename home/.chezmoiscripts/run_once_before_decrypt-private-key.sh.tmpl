@@ -8,7 +8,11 @@ if [ ! -f "/home/${USER}/.config/chezmoi/keyfile" ]; then
     max_attempts=3
 
     echo "dotfiles private key must be decrypted"
+{{ if eq .chezmoi.hostname "steamdeck" }}
+    while ! /home/deck/.local/bin/chezmoi age decrypt "{{ .chezmoi.workingTree }}/keyfile.age" --output "/home/${USER}/.config/chezmoi/keyfile" --passphrase ; do
+{{ else }}
     while ! chezmoi age decrypt "{{ .chezmoi.workingTree }}/keyfile.age" --output "/home/${USER}/.config/chezmoi/keyfile" --passphrase ; do
+{{ end }}
         if [ $attempt -ge $max_attempts ]; then
             echo "Command failed after $attempt attempts. Exiting."
             break
