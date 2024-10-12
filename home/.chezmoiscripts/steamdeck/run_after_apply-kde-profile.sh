@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/home/deck/.local/bin/konsave --apply steamdeck
+/home/deck/.venv/bin/konsave --apply steamdeck
