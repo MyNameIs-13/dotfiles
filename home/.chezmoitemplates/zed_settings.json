@@ -60,7 +60,11 @@
     "coloring": "indent_aware"
   },
   "terminal": {
+{{- if eq .chezmoi.hostname "steamdeck" }}
+    "font_family": "Hack",
+{{- else }}
     "font_family": "Hack Nerd Font Propo",
+{{- end }}
     "font_size": 13
   },
   "ensure_final_newline_on_save": false,

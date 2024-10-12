@@ -182,3 +182,5 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
   - remove confirm prompt for shutdown, restart
 
   ## Post Install steps (steamdeck)
+
+  ### Brave

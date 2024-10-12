@@ -68,6 +68,7 @@ keyfile.age
 
 .local/share/applications/game_mode.desktop
 .local/bin/desktop_mode.sh
+.local/share/user-places.xbel
 
 documents/.stignore
 
