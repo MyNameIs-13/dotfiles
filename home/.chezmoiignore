@@ -63,8 +63,11 @@ keyfile.age
 
 .bash_profile
 
+.config/kactivitymanagerd-statsrc
+.config/kactivitymanagerdrc
 .config/systemd/user/syncthing.service
 .config/steamtinkerlaunch
+.config/konsave
 
 .local/share/applications/game_mode.desktop
 .local/bin/desktop_mode.sh

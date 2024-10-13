@@ -161,7 +161,6 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
 ## TODO
 
 - add conditions for machine differences in config files
-  - add Steamdeck configs
 - doesn't seem possible (yet)
   - tv_screen_mode adapt for COSMIC
     - constant crashes of cosmic-randr
@@ -181,6 +180,38 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
     - unlock database when screenlock is over
   - remove confirm prompt for shutdown, restart
 
-  ## Post Install steps (steamdeck)
+## Post Install steps (steamdeck)
 
-  ### Brave
+### Brave (desktop mode)
+
+- Settings Icon
+  - More Tools
+    - Sync
+      - I have a Sync Code: enter from keepassxc
+
+### Thunderbird (desktop mode)
+
+- Settings Icon
+  - Tools
+    - Import
+      - Import from a file
+        - Import from a backed-up profile
+          - `/home/deck/.var/app/org.mozilla.Thunderbird/.thunderbird/thunderbird-profile.zip`
+          - Enter passwords
+- Settings icon next to `+ New Message`
+  - Hide Local Folders: enable
+
+### Settings (game mode)
+
+- General
+  - Battery Percentage: enable
+- Security
+  - Lock Screen: enable all
+- Audio
+  - Enable UI sounds: disable
+- Customization
+  - Shuffle Startup Move: enable
+- Downloads
+  - Disble download rates in bits per second: disable
+- Home
+  - Show personalized store content on my Home: disable

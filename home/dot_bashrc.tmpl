@@ -179,12 +179,12 @@ function update() {
 }
 {{- else }}
 function update() {
-    flatpak update -y
-    echo -e "______________________"
-    echo -e "${BOLD}++++ flatpak updated ++++${NORMAL}\n\n"
     chezmoi update
     echo -e "______________________"
     echo -e "${BOLD}++++ dotfiles updated ++++${NORMAL}\n\n"
+    flatpak update -y
+    echo -e "______________________"
+    echo -e "${BOLD}++++ flatpak updated ++++${NORMAL}\n\n"
 }
 {{- end }}
 
