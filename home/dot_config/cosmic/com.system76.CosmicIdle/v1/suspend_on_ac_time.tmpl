@@ -1,0 +1,5 @@
+{{- if or (contains "vm" .chezmoi.hostname) (contains .chezmoi.hostname "framework") }}
+30
+{{ else }}
+None
+{{- end }}
