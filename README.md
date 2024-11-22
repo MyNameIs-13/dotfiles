@@ -100,15 +100,6 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
 - keepassxc extension
   - connect
 
-### Joplin
-
-- Delete default Notebooks
-- Tools -> Options
-  - Synchronization
-    - Nextcloud password: set
-  - Backup
-    - path: ~/.config/joplin-desktop/JoplinBackup
-
 ### Pycharm
 
 - Customize
