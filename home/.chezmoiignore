@@ -41,6 +41,7 @@ keyfile.age
 .config/ob-studio
 .config/pipewire
 .config/Code
+.config/heroic
 .config/syncthing # TODO adapt for other location
 .config/systemd/user/arrpc.service
 .config/systemd/user/mixMics.service
