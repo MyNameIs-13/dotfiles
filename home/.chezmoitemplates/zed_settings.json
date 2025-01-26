@@ -27,7 +27,8 @@
     "terraform": true,
     "toml": true,
     "vala": true,
-    "xml": true
+    "xml": true,
+    "ruff": true
   },
   "hour_format": "hour24",
   "tabs": {
@@ -86,7 +87,34 @@
       "**playbook*.yml"
     ]
   },
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.fixAll.ruff": true,
+            "source.organizeImports.ruff": false
+          }
+        }
+      ]
+    }
+  },
   "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "format": {
+            "quote-style": "single"
+          },
+          "lineLength": 80,
+          "lint": {
+            "extendSelect": ["I"]
+          }
+        }
+      }
+    },
     "ansible-language-server": {
       "settings": {
         "ansible": {

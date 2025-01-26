@@ -1,5 +1,8 @@
 {{- if or (contains "desktop" .chezmoi.hostname) (eq .chezmoi.hostname "mean-machine") -}}
-["Panel","PanelExtra"]
+[
+    "Panel",
+    "PanelExtra",
+]
 {{- else -}}
 ["Panel"]
 {{- end -}}
