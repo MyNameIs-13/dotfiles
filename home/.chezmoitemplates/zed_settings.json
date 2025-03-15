@@ -88,6 +88,7 @@
     ]
   },
   "languages": {
+    "JSON": { "tab_size": 4, "hard_tabs": true, "format_on_save": "off" },
     "Python": {
       "language_servers": ["ruff"],
       "format_on_save": "on",

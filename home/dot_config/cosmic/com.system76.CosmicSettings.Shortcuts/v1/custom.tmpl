@@ -11,7 +11,7 @@
         ],
         key: "XF86Tools",
         description: Some("Toggle USB Mic"),
-    ): Spawn("/usr/bin/pactl set-source-mute \"alsa_input.usb-0c76_USB_PnP_Audio_Device_USB_PnP_Audio_Device-00.pro-input-0\" toggle"),
+    ): Spawn("/usr/bin/pactl set-source-mute \"alsa_input.usb-0c76_USB_PnP_Audio_Device-00.pro-input-0\" toggle"),
 {{- end }}
     (
         modifiers: [
