@@ -16,16 +16,6 @@ chezmoi init --apply --source "~/documents/scm/dotfiles"
 
 ## Post Install steps (non-steamdeck)
 
-### Disks
-
-- Select Disk with encrypted partitions
-  - Select encrypted partition
-    - Settings icon
-      - Edit Encryption Options...
-        - User Session Defaults: disable
-        - Name: virtual-machines/archive (depending on which one)
-        - Passphrase: from keepass
-
 ### KeepassXC
 
 - Tools
@@ -37,12 +27,56 @@ chezmoi init --apply --source "~/documents/scm/dotfiles"
 
 open syncthing `https://192.168.1.2:8384/` and share folders to start synchronization
 
+### Brave
+
+- Settings
+  - Search engine
+    - Manage search engine and site search
+      - Search engines:
+        - Google: remove
+        - Qwant: remove
+        - Bing: remove
+      - Site search: Add
+        - Name: POE Wiki
+        - Shortcut: @poe
+        - URL: `https://www.poewiki.net/index.php?title=Special:Search&search=%s`
+- keepassxc extension
+  - connect
+
+### Vesktop
+
+- User Settings
+  - Voice & Video
+    - Echo Cancellation: disable
+    - Automatic Gain Control: disable
+
+### Pycharm
+
+- Customize
+  - Import Settings...
+    - `~/.config/JetBrains/PyCharmCE2024-initial-settings`
+
+### KDEConnect
+
+- Open KDEConnect on smartphone
+  - Pair new device
+    - Add devices by IP (when not working directly)
+      - Add device IP
+        - Perform handshake
+
+### Conky (when hardware changed)
+
+- for GPU temp use `ls /sys/kernel/debug/` to find the correct path
+- for Network speed use `ls /sys/class/net` to find the correct device name
+- also check `sensors` for disk information
+
 ### Lutris
 
 - `+`
   - Add Game
     - Search the Lutris website for installer: battle.net
       - follow on screen instructions (default options)
+- Click through the Runners and log in to them
 
 ### Steam
 
@@ -84,44 +118,6 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
     gamemoderun gamescope -w 1280 -h 800 -W 1920 -H 1200 -f -- mangohud --dlsym %command%
     ```
 
-### Brave
-
-- Settings
-  - Search engine
-    - Manage search engine and site search
-      - Search engines:
-        - Google: remove
-        - Qwant: remove
-        - Bing: remove
-      - Site search: Add
-        - Name: POE Wiki
-        - Shortcut: @poe
-        - URL: `https://www.poewiki.net/index.php?title=Special:Search&search=%s`
-- keepassxc extension
-  - connect
-
-### Pycharm
-
-- Customize
-  - Import Settings...
-    - `~/.config/JetBrains/PyCharmCE2024-initial-settings`
-
-### Nextcloud desktop
-
-- Log in
-  - Skip folders configuration
-- Settings
-  - General
-    - Launch on system startup: disable
-
-### KDEConnect
-
-- Open KDEConnect on smartphone
-  - Pair new device
-    - Add devices by IP (when not working directly)
-      - Add device IP
-        - Perform handshake
-
 ### Virtual Machine Manager
 
 - Edit
@@ -141,13 +137,6 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
         - `+` Add Pool
           - Name: downloads
           - Target Path: `/home/${USER}/downloads`
-
-### Vesktop
-
-- User Settings
-  - Voice & Video
-    - Echo Cancellation: disable
-    - Automatic Gain Control: disable
 
 ## TODO
 
