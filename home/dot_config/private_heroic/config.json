@@ -28,12 +28,12 @@
     "wineCrossoverBottle": "Heroic",
     "winePrefix": "/home/skodo/games/heroic/prefixes/default",
     "wineVersion": {
-      "bin": "/home/skodo/.config/heroic/tools/wine/Wine-GE-latest/bin/wine",
-      "name": "Wine - Wine-GE-latest",
+      "bin": "/home/skodo/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine",
+      "name": "Wine - wine-ge-8-26-x86_64",
       "type": "wine",
-      "lib": "/home/skodo/.config/heroic/tools/wine/Wine-GE-latest/lib64",
-      "lib32": "/home/skodo/.config/heroic/tools/wine/Wine-GE-latest/lib",
-      "wineserver": "/home/skodo/.config/heroic/tools/wine/Wine-GE-latest/bin/wineserver"
+      "lib": "/home/skodo/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/lib64",
+      "lib32": "/home/skodo/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/lib",
+      "wineserver": "/home/skodo/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wineserver"
     },
     "enableEsync": true,
     "enableFsync": true,
@@ -43,6 +43,8 @@
     "framelessWindow": false,
     "beforeLaunchScriptPath": "",
     "afterLaunchScriptPath": "",
+    "disableUMU": false,
+    "verboseLogs": false,
     "customThemesPath": "",
     "gamescope": {
       "enableUpscaling": false,

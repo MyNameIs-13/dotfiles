@@ -1,5 +1,3 @@
 {{- if or (contains "desktop" .chezmoi.hostname) (eq .chezmoi.hostname "mean-machine") -}}
-Name("DP-1")
-{{- else -}}
-All
-{{- end -}}
+{{- template "outputs-desktop.ron" . -}}
+{{- end }}

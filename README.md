@@ -68,7 +68,7 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
 
 - for GPU temp use `ls /sys/kernel/debug/` to find the correct path
 - for Network speed use `ls /sys/class/net` to find the correct device name
-- also check `sensors` for disk information
+- also check `sensors` for disk information and use `lspci | grep -i nvme`
 
 ### Lutris
 
@@ -103,19 +103,13 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
     gamemoderun gamescope -e -w 1280 -h 800 -W 1920 -H 1200 -f %command%
 
     # general desktop
-    gamemoderun gamescope -e -w 2560 -h 1440 -f %command%
-
-    # grim dawn desktop
-    gamemoderun gamescope -e -w 2560 -h 1440 --force-windows-fullscreen -f %command%
-
-    # Enshrouded desktop
-    gamemoderun %command%
-
-    # POE desktop
-    gamemoderun gamescope -e -w 2552 -h 1080 --force-windows-fullscreen --mangoapp -f %command%
+    gamescope -w 2560 -h 1440 -W 2560 -H 1440 -f -- gamemoderun mangohud %command%
 
     # opengl games
-    gamemoderun gamescope -w 1280 -h 800 -W 1920 -H 1200 -f -- mangohud --dlsym %command%
+    gamescope -w 1280 -h 800 -W 1920 -H 1200 -f -- gamemoderun mangohud --dlsym %command%
+
+    # in front to create logs
+    PROTON_LOG=1
     ```
 
 ### Virtual Machine Manager

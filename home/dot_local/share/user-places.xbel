@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xbel>
-<xbel xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:kdepriv="http://www.kde.org/kdepriv" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks">
+<xbel xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks" xmlns:kdepriv="http://www.kde.org/kdepriv" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info">
  <info>
   <metadata owner="http://www.kde.org">
    <kde_places_version>4</kde_places_version>
@@ -155,6 +155,7 @@
    <metadata owner="http://www.kde.org">
     <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p8</UDI>
     <isSystemItem>true</isSystemItem>
+    <uuid>f8839f07-50dd-4ead-9f5e-3a5df760934e</uuid>
    </metadata>
   </info>
  </separator>
@@ -163,6 +164,7 @@
    <metadata owner="http://www.kde.org">
     <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p1</UDI>
     <isSystemItem>true</isSystemItem>
+    <uuid>c76b-0650</uuid>
    </metadata>
   </info>
  </separator>
@@ -171,6 +173,7 @@
    <metadata owner="http://www.kde.org">
     <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p6</UDI>
     <isSystemItem>true</isSystemItem>
+    <uuid>88035590-57ef-4a87-9f53-63d27ab727dc</uuid>
    </metadata>
   </info>
  </separator>
@@ -179,6 +182,7 @@
    <metadata owner="http://www.kde.org">
     <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p4</UDI>
     <isSystemItem>true</isSystemItem>
+    <uuid>65d35c7e-10ba-4beb-8b29-31820d0980f7</uuid>
    </metadata>
   </info>
  </separator>
@@ -187,6 +191,7 @@
    <metadata owner="http://www.kde.org">
     <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p2</UDI>
     <isSystemItem>true</isSystemItem>
+    <uuid>c76b-9d54</uuid>
    </metadata>
   </info>
  </separator>
