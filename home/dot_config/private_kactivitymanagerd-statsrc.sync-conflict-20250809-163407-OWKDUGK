@@ -1,0 +1,5 @@
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-3f438f1d-5146-413a-ae5f-92651eccdf96]
+ordering=applications:com.rustdesk.RustDesk.desktop,applications:org.kde.kdeconnect.app.desktop,applications:io.freetubeapp.FreeTube.desktop,applications:org.videolan.VLC.desktop,applications:io.github.trigg.discover_overlay.desktop,applications:io.github.trigg.discover_overlay.configure.desktop,applications:org.kde.kate.desktop,applications:systemsettings.desktop,applications:org.kde.discover.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-global]
+ordering=applications:com.rustdesk.RustDesk.desktop,applications:org.kde.kdeconnect.app.desktop,applications:io.freetubeapp.FreeTube.desktop,applications:org.videolan.VLC.desktop,applications:io.github.trigg.discover_overlay.desktop,applications:io.github.trigg.discover_overlay.configure.desktop,applications:org.kde.kate.desktop,applications:systemsettings.desktop,applications:org.kde.discover.desktop
