@@ -1,6 +1,0 @@
-{{- if or (contains "framework" .chezmoi.hostname) (eq .chezmoi.hostname "fw") -}}
-{{- template "outputs-notebook.ron" . -}}
-{{- end }}
-{{- if or (contains "desktop" .chezmoi.hostname) (eq .chezmoi.hostname "mean-machine") -}}
-{{- template "outputs-desktop.ron" . -}}
-{{- end }}

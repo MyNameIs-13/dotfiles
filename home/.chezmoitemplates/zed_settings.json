@@ -8,133 +8,292 @@
 // command palette
 
 {
-  "auto_update": false,
-  "auto_install_extensions": {
-    "ansible": true,
-    "basher": true,
-    "docker-compose": true,
-    "env": true,
-    "git-firefly": true,
-    "html": true,
-    "ini": true,
-    "just": true,
-    "make": true,
-    "markdown-oxide": true,
-    "meson": true,
-    "nix": true,
-    "powershell": true,
-    "ron": true,
-    "terraform": true,
-    "toml": true,
-    "vala": true,
-    "xml": true,
-    "ruff": true
-  },
-  "hour_format": "hour24",
-  "tabs": {
-    "close_position": "right",
-    "file_icons": true,
-    "git_status": true
-  },
-  "tab_bar": {
-    "show": true,
-    "show_nav_history_buttons": false
-  },
-  "scrollbar": {
-    "show": "always"
-  },
-  "use_autoclose": false,
+    //Zed visuals
+    "show_wrap_guides": true,
+    "ui_font_family": ".ZedSans",
+    "ui_font_size": 18,
 {{- if eq .chezmoi.hostname "steamdeck" }}
-  "ui_font_family": "Hack",
+    "buffer_font_family": "Hack",
 {{- else }}
-  "ui_font_family": "Hack Nerd Font Propo",
+    "buffer_font_family": "Hack Nerd Font Propo",
 {{- end }}
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "One Dark"
-  },
-  "indent_guides": {
-    "enabled": true,
-    "coloring": "indent_aware"
-  },
-  "terminal": {
-{{- if eq .chezmoi.hostname "steamdeck" }}
-    "font_family": "Hack",
-{{- else }}
-    "font_family": "Hack Nerd Font Propo",
-{{- end }}
-    "font_size": 13
-  },
-  "ensure_final_newline_on_save": false,
-  "file_types": {
-    "Ansible": [
-      "**.ansible.yml",
-      "**/defaults/**.yml",
-      "**/defaults/**.yaml",
-      "**/meta/**.yml",
-      "**/meta/**.yaml",
-      "**/tasks/**.yml",
-      "**/tasks/*.yml",
-      "**/tasks/*.yaml",
-      "**/handlers/*.yml",
-      "**/handlers/*.yaml",
-      "**/group_vars/**.yml",
-      "**/group_vars/**.yaml",
-      "**playbook*.yaml",
-      "**playbook*.yml"
-    ]
-  },
-  "languages": {
-    "JSON": { "tab_size": 4, "hard_tabs": true, "format_on_save": "off" },
-    "Python": {
-      "language_servers": ["ruff"],
-      "format_on_save": "on",
-      "formatter": [
-        {
-          "code_actions": {
-            "source.fixAll.ruff": true,
-            "source.organizeImports.ruff": false
-          }
-        }
-      ]
-    }
-  },
-  "lsp": {
-    "ruff": {
-      "initialization_options": {
-        "settings": {
-          "format": {
-            "quote-style": "single"
-          },
-          "lineLength": 80,
-          "lint": {
-            "extendSelect": ["I"]
-          }
-        }
-      }
+    "buffer_font_size": 15,
+    "buffer_font_features": { "calt": false },
+    "base_keymap": "JetBrains",
+    // "vim_mode": true,
+    "title_bar": {
+        "show_menus": true,
+        "show_branch_icon": false
     },
-    "ansible-language-server": {
-      "settings": {
-        "ansible": {
-          "path": "ansible"
-        },
-        "executionEnvironment": {
-          "enabled": false
-        },
-        "python": {
-          "interpreterPath": "python3"
-        },
-        "validation": {
-          "enabled": true,
-          "lint": {
-            "enabled": true,
-            "path": "ansible-lint"
-          }
+    "journal": {
+        "hour_format": "hour24"
+    },
+    "tabs": {
+        "close_position": "right",
+        "file_icons": true,
+        "git_status": true
+    },
+    "tab_bar": {
+        "show": true,
+        "show_nav_history_buttons": false
+    },
+    "scrollbar": {
+        "show": "always"
+    },
+    "indent_guides": {
+        "enabled": true,
+        "coloring": "indent_aware"
+    },
+    "icon_theme": "Catppuccin Mocha",
+    "theme": {
+        "mode": "dark",
+        "light": "Zedokai Light",
+        "dark": "Zedokai"
+    },
+    "experimental.theme_overrides": {
+        "editor.document_highlight.bracket_background": "#A45E21"
+    },
+    "theme_overrides": {
+        "Zedokai": {
+            "search.match_background": "#FFD700",
+            "error.background": "#662A33",
+            "error.border": "#000000",
+            "hint.background": "#E6AC00",
+            "syntax": {
+                "constant.comment.todo": {
+                    "color": "#c18401ff"
+                    // "background_color": "#00000000",
+                    // "font_weight": "bold",
+                    // "font_style": "italic"
+                },
+                "string.comment.info": {
+                    "color": "#50a14fff"
+                    // "background_color": "#00000000",
+                    // "font_weight": "bold",
+                    // "font_style": "italic"
+                },
+                "keyword.comment.warn": {
+                    "color": "#c18401ff"
+                    // "background_color": "#00000000",
+                    // "font_weight": "bold",
+                    // "font_style": "italic"
+                },
+                "property.comment.error": {
+                    "color": "#ca1243ff"
+                    // "background_color": "#00000000",
+                    // "font_weight": "bold",
+                    // "font_style": "italic"
+                },
+                "emphasis.comment.user": {
+                    "color": "#000000dd"
+                    // "background_color": "#00000000",
+                    // "font_weight": "bold",
+                    // "font_style": "italic"
+                }
+            }
         }
-      }
+    },
+    "gutter": {
+        "runnables": true
+    },
+    "toolbar": {
+        "selections_menu": true,
+        "quick_actions": true,
+        "breadcrumbs": true,
+        "code_actions": true
+    },
+    "git": { "inline_blame": { "enabled": false } },
+    "tab_size": 4,
+    // AI
+    "disable_ai": false,
+    "edit_predictions": {
+        "mode": "subtle"
+    },
+    "context_servers": {
+        "mcp-server-context7": {
+            "source": "extension",
+            "enabled": true,
+            "settings": {
+                "context7_api_key": ""
+            }
+        }
+    },
+    "agent": {
+        "inline_assistant_model": {
+            "provider": "google",
+            "model": "gemini-2.5-flash"
+        },
+        "default_profile": "write",
+        "default_model": {
+            "provider": "google",
+            "model": "gemini-2.5-flash"
+        },
+        "expand_terminal_card": true,
+        "button": true,
+        "use_modifier_to_send": true,
+        "model_parameters": []
+    },
+    // Panel
+    "project_panel": {
+        "entry_spacing": "standard",
+        "hide_root": true
+    },
+    "outline_panel": {
+        "dock": "right",
+        "expand_outlines_with_depth": 0
+    },
+    "git_panel": {
+        "dock": "right",
+        "button": true
+    },
+    "active_pane_modifiers": { "inactive_opacity": 0.7 },
+    "collaboration_panel": {
+        "button": false
+    },
+    "notification_panel": {
+        "button": false
+    },
+    "terminal": {
+        "toolbar": {
+            "breadcrumbs": false
+        },
+        "dock": "bottom",
+    {{- if eq .chezmoi.hostname "steamdeck" }}
+        "font_family": "Hack",
+    {{- else }}
+        "font_family": "Hack Nerd Font Propo",
+    {{- end }}
+        "font_size": 13,
+        "detect_venv": {
+            "on": {
+                // Default directories to search for virtual environments, relative
+                // to the current working directory. We recommend overriding this
+                // in your project's settings, rather than globally.
+                "directories": [".env", "env", ".venv", "venv"],
+                // Can also be `csh`, `fish`, and `nushell`
+                "activate_script": "default"
+            }
+        },
+        "env": {
+            "GIT_EDITOR": "zed --wait"
+        }
+        },
+        // Zed behaviour
+        "use_system_path_prompts": false,
+        "extend_comment_on_newline": false,
+        "completions": { "lsp_insert_mode": "insert" },
+        "show_completions_on_input": true,
+        "use_autoclose": true,
+        "ensure_final_newline_on_save": true,
+        "on_last_window_closed": "quit_app",
+        "format_on_save": "off",
+        "autosave": {
+            "after_delay": {
+                "milliseconds": 1000
+            }
+        },
+        "show_edit_predictions": true,
+        "auto_update": false,
+        "auto_install_extensions": {
+            "ansible": true,
+            "basher": true,
+            "docker-compose": true,
+            "env": true,
+            "git-firefly": true,
+            "html": true,
+            "ini": true,
+            "just": true,
+            "make": true,
+            "markdown-oxide": true,
+            "meson": true,
+            // "nix": true,
+            "powershell": true,
+            "ron": true,
+            // "terraform": true,
+            "toml": true,
+            // "vala": true,
+            "xml": true,
+            "ruff": true,
+            "comment": true,
+            "csharp": true,
+            "catppuccin-icons": true,
+            "zedokai": true,
+            "mcp-server-context7": true
+        },
+        // file type associations
+        "file_types": {
+            "Ansible": [
+                "**.ansible.yml",
+                "**/defaults/**.yml",
+                "**/defaults/**.yaml",
+                "**/meta/**.yml",
+                "**/meta/**.yaml",
+                "**/tasks/**.yml",
+                "**/tasks/*.yml",
+                "**/tasks/*.yaml",
+                "**/handlers/*.yml",
+                "**/handlers/*.yaml",
+                "**/group_vars/**.yml",
+                "**/group_vars/**.yaml",
+                "**playbook*.yaml",
+                "**playbook*.yml"
+            ],
+            "Git Attributes": ["**/{git,.git,.git/info}/attributes"],
+            "Git Config": [
+                "*.gitconfig",
+                "**/{git,.git/modules,.git/modules/*}/config"
+            ],
+            "Git Ignore": ["**/{git,.git}/ignore", "**/.git/info/exclude"],
+            "CSharp": ["**/**.cs"]
+        },
+        // languages specific overwrites
+        "languages": {},
+        // language server protocol
+        "lsp": {
+            "ruff": {
+                "initialization_options": {
+                    "settings": {
+                        "format": {
+                            "quote-style": "single"
+                        },
+                        "lineLength": 80,
+                        "lint": {
+                            "extendSelect": ["I"]
+                        }
+                    }
+                }
+            },
+            "yaml-language-server": {
+                "settings": {
+                    "yaml": {
+                        "schemas": {
+                            "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/inventory.json": [
+                                "./inventory/*.yaml",
+                                "hosts.yml"
+                            ]
+                        }
+                    }
+                }
+            },
+            "ansible-language-server": {
+                "settings": {
+                    "ansible": {
+                        "path": "ansible"
+                    },
+                    "executionEnvironment": {
+                        "enabled": false
+                    },
+                    "python": {
+                        "interpreterPath": "python3"
+                    },
+                    "validation": {
+                        "enabled": true,
+                        "lint": {
+                            "enabled": false, // disable ansible-lint
+                            "path": "ansible-lint"
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
-}

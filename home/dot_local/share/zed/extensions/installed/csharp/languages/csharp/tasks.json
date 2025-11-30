@@ -1,0 +1,9 @@
+[
+    {
+        "label": "Run .Net program",
+        "command": "dotnet",
+        "args": ["run"],
+        "cwd": "$ZED_WORKTREE_ROOT",
+        "show_command": true
+    }
+]

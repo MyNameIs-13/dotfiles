@@ -1,3 +1,7 @@
+encryption: "age"
+age:
+  identity: "~/.config/chezmoi/keyfile"
+  recipient: "age1jly30sgfrnvx5ggr8q445sqjnx0e2dnfjkyfzf8vd285sdwws38spvm326"
 sourceDir: "{{ .chezmoi.config.sourceDir }}"
 edit:
 {{- if eq .chezmoi.hostname "steamdeck" }}
@@ -11,10 +15,6 @@ git:
   autocommit: false
   autopush: false
 verbose: false
-encryption: "age"
-age:
-  identity: "~/.config/chezmoi/keyfile"
-  recipient: "age1jly30sgfrnvx5ggr8q445sqjnx0e2dnfjkyfzf8vd285sdwws38spvm326"
 data:
   kdbx_file: "/home/{{ .chezmoi.username }}/documents/confidental/GSKPasswordList.kdbx"
   kdbx_keyfile: ""

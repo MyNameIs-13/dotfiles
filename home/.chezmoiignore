@@ -10,9 +10,6 @@ keyfile.age
 .config/pipewire/mixMics.sh
 .config/systemd/user/mixMics.service
 .config/Nextcloud
-
-.local/state/outputs-desktop.ron
-.local/state/outputs-tv.ron
 {{ end }}
 
 {{ if eq .chezmoi.hostname "mean-machine" }}

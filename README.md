@@ -174,6 +174,9 @@ open syncthing `https://192.168.1.2:8384/` and share folders to start synchroniz
           - Enter passwords
 - Settings icon next to `+ New Message`
   - Hide Local Folders: enable
+  
+### Zed-Editor
+- import `/opt/NetCoreDbg-Extension` as Dev-Extension
 
 ### Settings (game mode)
 
